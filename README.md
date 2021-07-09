@@ -1,5 +1,7 @@
 # Bookstore App
-## Objectives:
+## Live Link
+[Visit the Bookstore](https://redux-app-bookstore.herokuapp.com/)
+## Objectives
 - Using Redux in a React application
 - Structuring a Redux store
 - Unit testing a React and Redux application
