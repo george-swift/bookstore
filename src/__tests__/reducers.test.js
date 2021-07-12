@@ -1,4 +1,4 @@
-import books from "../reducers/books";
+import books from '../reducers/books';
 import { uniqueID } from '../constants';
 
 describe('Testing the books reducer', () => {
@@ -18,11 +18,11 @@ describe('Testing the books reducer', () => {
   const newBook = {
     id: uniqueID(),
     title: 'Test book',
-    category: 'Action'
+    category: 'Action',
   };
 
   test('Should return the initial state by default', () => {
-    expect(books(preloadedState, {})).toEqual(preloadedState)
+    expect(books(preloadedState, {})).toEqual(preloadedState);
   });
 
   test('Should handle the create book action', () => {
@@ -33,19 +33,19 @@ describe('Testing the books reducer', () => {
 
     const expectedState = [...preloadedState, newBook];
 
-    expect(books(preloadedState, action)).toEqual(expectedState)
+    expect(books(preloadedState, action)).toEqual(expectedState);
   });
 
   test('Should handle the remove book action', () => {
     const action = {
       type: 'REMOVE_BOOK',
       payload: {
-        bookId: newBook.id
-      }
+        bookId: newBook.id,
+      },
     };
 
     const newState = [...preloadedState, newBook];
 
     expect(books(newState, action)).toEqual(preloadedState);
   });
-})
+});

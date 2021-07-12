@@ -1,17 +1,17 @@
-import { createBook, removeBook } from "../actions";
+import { createBook, removeBook } from '../actions';
 import { uniqueID } from '../constants';
 
 describe('Testing action creators', () => {
   const book = {
     id: uniqueID(),
     title: 'Test book',
-    category: 'Learning'
+    category: 'Learning',
   };
 
   test('Should create book on submit', () => {
     const expectedAction = {
       type: 'CREATE_BOOK',
-      payload: book
+      payload: book,
     };
 
     expect(createBook(book)).toEqual(expectedAction);
@@ -21,10 +21,10 @@ describe('Testing action creators', () => {
     const expectedAction = {
       type: 'REMOVE_BOOK',
       payload: {
-        bookId: book.id
-      }
+        bookId: book.id,
+      },
     };
 
     expect(removeBook(book)).toEqual(expectedAction);
   });
-})
+});
