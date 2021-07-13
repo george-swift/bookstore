@@ -37,5 +37,4 @@ describe('Testing action creators', () => {
 
     expect(filterByCategory('Sci-Fi')).toEqual(expectedAction);
   });
-
 });
