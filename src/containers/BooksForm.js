@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -38,20 +37,19 @@ const BooksForm = ({ createBook }) => {
 
   return (
     <form className="container row g-2 bookform" onSubmit={handleSubmit}>
-      <div className="col-lg-6 form-floating">
+      <div className="col-lg-6">
         <input
           type="text"
           className="form-control"
           name="title"
-          placeholder="Book title"
+          placeholder="Book Title"
           onChange={handleChange}
           value={title}
           minLength="5"
           required
         />
-        <label>Book Title</label>
       </div>
-      <div className="col-lg-4 form-floating">
+      <div className="col-lg-4">
         <select
           className="form-select"
           name="category"
@@ -66,7 +64,6 @@ const BooksForm = ({ createBook }) => {
             ))
           }
         </select>
-        <label>Category</label>
       </div>
       <button type="submit" className="btn btn-primary col-lg-2 fw-bold">ADD BOOK</button>
     </form>
