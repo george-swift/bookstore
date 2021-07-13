@@ -1,4 +1,5 @@
 import books from '../reducers/books';
+import filter from '../reducers/filter';
 import { uniqueID } from '../constants';
 
 describe('Testing the books reducer', () => {
@@ -22,6 +23,7 @@ describe('Testing the books reducer', () => {
   };
 
   test('Should return the initial state by default', () => {
+    expect(books(undefined, {})).toStrictEqual([]);
     expect(books(preloadedState, {})).toEqual(preloadedState);
   });
 
@@ -47,5 +49,20 @@ describe('Testing the books reducer', () => {
     const newState = [...preloadedState, newBook];
 
     expect(books(newState, action)).toEqual(preloadedState);
+  });
+});
+
+describe('Testing the filter reducer', () => {
+  test('Should return All as default category', () => {
+    expect(filter(undefined, {})).toMatch('All');
+  });
+
+  test('Should change filter category', () => {
+    const action = {
+      type: 'CHANGE_FILTER',
+      payload: 'Biography',
+    };
+
+    expect(filter('Learning', action)).toMatch('Biography');
   });
 });

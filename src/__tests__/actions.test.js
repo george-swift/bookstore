@@ -1,4 +1,5 @@
-import { createBook, removeBook } from '../actions';
+import { createBook, removeBook, filterByCategory } from '../actions';
+
 import { uniqueID } from '../constants';
 
 describe('Testing action creators', () => {
@@ -26,5 +27,14 @@ describe('Testing action creators', () => {
     };
 
     expect(removeBook(book)).toEqual(expectedAction);
+  });
+
+  test('Should provide a filter category', () => {
+    const expectedAction = {
+      type: 'CHANGE_FILTER',
+      payload: 'Sci-Fi',
+    };
+
+    expect(filterByCategory('Sci-Fi')).toEqual(expectedAction);
   });
 });

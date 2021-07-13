@@ -1,14 +1,18 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../actions';
+import { removeBook, filterByCategory } from '../actions';
+import { booksByCategory } from '../selectors';
+import CategoryFilter from '../components/CategoryFilter';
 import Book from '../components/Book';
 
 export default function BooksList() {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => booksByCategory(state));
   const dispatch = useDispatch();
   const handleRemoveBook = (book) => dispatch(removeBook(book));
+  const handleFilterChange = (filter) => dispatch(filterByCategory(filter));
 
   return (
-    <div className="container bg-light table-responsive">
+    <div className="container bookslist">
+      <CategoryFilter filterCategory={handleFilterChange} />
       <table className="table table-hover">
         <thead>
           <tr>
@@ -20,9 +24,13 @@ export default function BooksList() {
         </thead>
         <tbody>
           {
-            books.map((book) => (
-              <Book key={book.id} book={book} removeBook={handleRemoveBook} />
-            ))
+            books?.map((book) => <Book key={book.id} book={book} removeBook={handleRemoveBook} />)
+            ?? (
+              <tr>
+                <th scope="row">n/a</th>
+                <td colSpan="4">No available books in this category</td>
+              </tr>
+            )
           }
         </tbody>
       </table>
