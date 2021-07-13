@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { CATEGORIES } from '../constants';
 
 export default function CategoryFilter({ filterCategory }) {
+  const categories = [...['All'], ...CATEGORIES];
+
   const handleFilterChange = (e) => {
     const { value } = e.target;
     filterCategory(value);
@@ -12,9 +14,8 @@ export default function CategoryFilter({ filterCategory }) {
       className="form-select my-3 w-auto"
       onChange={handleFilterChange}
     >
-      <option value="All">All</option>
       {
-        CATEGORIES.map((category) => (
+        categories.map((category) => (
           <option key={category} value={category}>
             {category}
           </option>
