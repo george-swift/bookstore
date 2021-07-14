@@ -11,29 +11,16 @@ export default function BooksList() {
   const handleFilterChange = (filter) => dispatch(filterByCategory(filter));
 
   return (
-    <div className="container bookslist">
+    <div className="container-fluid bookslist">
       <CategoryFilter filterCategory={handleFilterChange} />
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Book ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            books?.map((book) => <Book key={book.id} book={book} removeBook={handleRemoveBook} />)
-            ?? (
-              <tr>
-                <th scope="row">n/a</th>
-                <td colSpan="4">No available books in this category</td>
-              </tr>
-            )
+      <div className="row">
+        {
+          books?.map((book) => (
+            <Book key={book.id} book={book} removeBook={handleRemoveBook} />))
+            ?? (<div className="col-12"><p>No available books in this category</p></div>)
           }
-        </tbody>
-      </table>
+      </div>
+      <hr id="section-divider" />
     </div>
   );
 }
