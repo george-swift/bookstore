@@ -15,7 +15,7 @@
 .book-row {
   display: flex;
   min-width: 75rem;
-  height: 10.625rem;
+  min-height: 10.625rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   margin-bottom: 0.938rem;
   border-radius: 4px;
@@ -49,7 +49,7 @@
 
 .title {
   min-width: 12.313rem;
-  height: 1.813rem;
+  min-height: 1.813rem;
   margin-top: 0.188rem;
   margin-bottom: 0;
   font: bold 1.375rem 'Roboto Slab', serif;
