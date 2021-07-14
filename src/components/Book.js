@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { CgSpinner } from 'react-icons/cg';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { randomInt } from '../constants';
 
 const Book = ({ book, removeBook }) => (
@@ -25,7 +26,7 @@ const Book = ({ book, removeBook }) => (
         </ul>
       </div>
       <div className="progress-ui">
-        <span className="progress-icon"><CgSpinner /></span>
+        <span className="progress-icon"><CircularProgressbar value={`${randomInt(50, 100)}`} text={`${randomInt(50, 100)}`} /></span>
         <p>
           <span className="percent">{`${randomInt(50, 100)}%`}</span>
           <br />
