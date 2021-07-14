@@ -1,0 +1,181 @@
+.bookslist {
+  background-color: #f8f9fa;
+  margin-top: 2.313rem;
+
+  .form-select,
+  .row {
+    margin: 0 6.25rem 0;
+  }
+
+  .form-select {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.book-row {
+  display: flex;
+  min-width: 75rem;
+  height: 10.625rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  margin-bottom: 0.938rem;
+  border-radius: 4px;
+  background-color: #fff;
+
+  @include divider;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.book-name {
+  flex: 0 0 67.333%;
+  display: flex;
+  justify-content: space-between;
+  color: $black-two;
+
+  @include font-props;
+}
+
+.book-category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin-right: 2.438rem;
+  margin-bottom: 0;
+  opacity: 0.5;
+  font: bold 0.875rem 'Montserrat', sans-serif;
+  letter-spacing: normal;
+}
+
+.title {
+  min-width: 12.313rem;
+  height: 1.813rem;
+  margin-top: 0.188rem;
+  margin-bottom: 0;
+  font: bold 1.375rem 'Roboto Slab', serif;
+  letter-spacing: -0.2px;
+}
+
+.author {
+  min-width: 6.688rem;
+  height: 1.188rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+
+  @include book-fonts;
+}
+
+.details {
+  ul {
+    @include center;
+
+    margin-top: 1.213rem;
+    margin-bottom: 0;
+  }
+}
+
+.action {
+  padding-right: 1.063rem;
+  padding-left: 0.938rem;
+
+  @include book-fonts;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  button {
+    border: 0;
+    background-color: transparent;
+
+    @include book-fonts;
+  }
+}
+
+.progress-ui {
+  @include center;
+
+  font-family: 'Montserrat', sans-serif;
+
+  p {
+    margin: 0;
+  }
+}
+
+.progress-icon {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+
+  svg {
+    width: 4.25rem;
+    height: 4.25rem;
+    color: $dodger-blue;
+  }
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  letter-spacing: normal;
+}
+
+.divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 1.125rem 3.688rem 0 0;
+
+  @include divider;
+}
+
+.book-chapter {
+  flex: 0 0 32.667%;
+  color: $black-two;
+  font: 300 0.813rem 'Roboto Slab', serif;
+
+  @include font-props;
+}
+
+.current-chapter {
+  min-width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 0;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.current-lesson {
+  min-width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 0;
+  font: 300 1rem 'Roboto Slab', serif;
+  letter-spacing: -0.4px;
+}
+
+.update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+
+  @include action-button;
+}
+
+#section-divider {
+  min-width: 75rem;
+  height: 0.125rem;
+  margin: 2.5rem 6.25rem 0;
+
+  @include divider;
+}

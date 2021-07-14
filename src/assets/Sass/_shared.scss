@@ -1,0 +1,53 @@
+$azure: #0290ff;
+$medium-blue: #307bbe;
+$dodger-blue: #379cf6;
+$black-two: #121212;
+$warm-grey: #888;
+$pinkish-grey: #c4c4c4;
+
+@mixin divider {
+  border: 1px solid #e8e8e8;
+}
+
+@mixin font-props {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin nav-fonts {
+  height: 1rem;
+  font: normal 0.813rem/1.9px 'Montserrat', sans-serif;
+  color: $black-two;
+
+  @include font-props;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin book-fonts {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+
+  @include font-props;
+}
+
+@mixin action-button {
+  border: none;
+  background-color: $azure;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+}
