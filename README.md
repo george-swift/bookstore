@@ -1,32 +1,39 @@
 # Bookstore App
+![](./src/assets/bookstore.png)
 ## Live Link
 [Visit the Bookstore](https://redux-app-bookstore.herokuapp.com/)
 ## Objectives
 - Using Redux in a React application
 - Structuring a Redux store
-- Unit testing a React and Redux application
 - Using React Redux Hooks
+- Calculating derived data with Redux Selectors
+- Unit testing a React and Redux application
 - Functional Programming
 - Meeting model client requirements
 
 ## Features
-The bookstore application manages a list of books online. Users get to keep a list of books they own. Each book has a title and author and belongs to some category. Users can add comments to the book and save their reading progress. More information will be available with subsequent implementations.
+Bookstore CMS is a book management app that implements a model design spec. Each book has a title and belongs to some category. Currently, users can add a book to the store by filling in the title and selecting a category in the form. To delete a book from _Bookstore CMS_ simply click on `Remove`. Above the books, the category filter displays books for a given category. By default, it shows `All`. Support to add comments, reading progress and editing to each book will be available in subsequent implementations. This app is hosted on Heroku.
+
+_Selecting a category to filter books in the store._
+
+![](./src/assets/mobile.png)
 
 ## Prerequisites
 - Internet Connection
 - An Integrated Development Environment
-- Chrome, Firefox or Safari.
+- Chrome, Firefox or Safari across all screen sizes
 - Node Package Manager [(NPM)](https://docs.npmjs.com/about-npm)
 
 ## Tools/Built With
 - Node.js
-- React
-- React-DOM
 - React-Create-App
+- React
 - Redux
 - Javascript ES6+
 - npm packages
-- CSS
+- Bootstrap 5
+- SCSS
+- HTML5/CSS
 
 
 ## Getting Started
@@ -37,7 +44,7 @@ The bookstore application manages a list of books online. Users get to keep a li
 - To terminate the server, enter `Ctrl + C` in your terminal
 
 ## Testing
-Run `npm test` to test the application
+A comprehensive test suite was used in the development of the Bookstore App. Run `npm test` to get a verbose test report.
 ## Authors
 
 👤 &nbsp; **Ubong George**
