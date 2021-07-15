@@ -4,6 +4,11 @@
 .app {
   background-color: #fafafa;
   min-height: 100vh;
+  letter-spacing: normal;
+  font-family: "Montserrat", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 .app ul {
@@ -16,9 +21,13 @@
   padding-left: 0;
 }
 
-.header {
+.header,
+.header ul {
   display: flex;
   align-items: center;
+}
+
+.header {
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
@@ -32,15 +41,9 @@
   color: #0290ff;
   font: bold 1.875rem "Montserrat", sans-serif;
   text-decoration: none;
-  letter-spacing: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .header ul {
-  display: flex;
-  align-items: center;
   flex-grow: 1;
   margin: 0;
   text-transform: uppercase;
@@ -51,28 +54,25 @@
   text-align: end;
 }
 
-#books {
+.cms .books {
   width: 3.688rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
 }
 
-#categories {
+.cms .categories {
   width: 6.563rem;
   margin: 1.125rem 0 0.688rem 0;
   opacity: 0.5;
 }
 
-#books,
-#categories {
+.cms .books,
+.cms .categories {
   height: 1rem;
   font: normal 0.813rem/1.9px "Montserrat", sans-serif;
   color: #121212;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
-#user {
+.user {
   width: 2.813rem;
   height: 2.813rem;
   padding: 0.875rem;
@@ -80,7 +80,7 @@
   border-radius: 50%;
 }
 
-#user-svg {
+.user-svg {
   color: #0290ff;
 }
 
@@ -94,18 +94,14 @@
   margin: 0 6.25rem 0;
 }
 
-.bookslist .form-select {
-  font-family: "Montserrat", sans-serif;
-}
-
 .book-row {
-  display: flex;
   min-width: 75rem;
   min-height: 10.625rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   margin-bottom: 0.938rem;
   border-radius: 4px;
   background-color: #fff;
+  color: #121212;
   border: 1px solid #e8e8e8;
 }
 
@@ -117,10 +113,6 @@
   flex: 0 0 67.333%;
   display: flex;
   justify-content: space-between;
-  color: #121212;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .book-category {
@@ -130,7 +122,6 @@
   margin-bottom: 0;
   opacity: 0.5;
   font: bold 0.875rem "Montserrat", sans-serif;
-  letter-spacing: normal;
 }
 
 .title {
@@ -147,19 +138,24 @@
   height: 1.188rem;
   margin-top: 0.25rem;
   margin-bottom: 0;
+}
+
+.author,
+.action,
+.action button {
   font-family: "Roboto Slab", serif;
   font-size: 0.875rem;
   font-weight: 300;
-  letter-spacing: normal;
   color: #4386bf;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
+}
+
+.details ul,
+.progress-ui {
+  display: flex;
+  align-items: center;
 }
 
 .details ul {
-  display: flex;
-  align-items: center;
   margin-top: 1.213rem;
   margin-bottom: 0;
 }
@@ -167,14 +163,6 @@
 .action {
   padding-right: 1.063rem;
   padding-left: 0.938rem;
-  font-family: "Roboto Slab", serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: normal;
-  color: #4386bf;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .action:first-child {
@@ -184,20 +172,6 @@
 .action button {
   border: 0;
   background-color: transparent;
-  font-family: "Roboto Slab", serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: normal;
-  color: #4386bf;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-}
-
-.progress-ui {
-  display: flex;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
 }
 
 .progress-ui p {
@@ -212,7 +186,6 @@
 
 .progress-icon svg {
   width: 4.25rem;
-  height: 4.25rem;
   color: #379cf6;
 }
 
@@ -229,7 +202,6 @@
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
   font-size: 0.875rem;
-  letter-spacing: normal;
 }
 
 .divider {
@@ -241,11 +213,7 @@
 
 .book-chapter {
   flex: 0 0 32.667%;
-  color: #121212;
   font: 300 0.813rem "Roboto Slab", serif;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .current-chapter {
@@ -283,7 +251,7 @@
   border-color: #0d6efd;
 }
 
-#section-divider {
+.section-divider {
   min-width: 75rem;
   height: 0.125rem;
   margin: 2.5rem 6.25rem 0;
@@ -292,10 +260,9 @@
 
 .wrap-form {
   padding: 0 0 8rem;
-  font-family: "Montserrat", sans-serif;
 }
 
-#form-title {
+.form-title {
   min-width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 6.25rem 1.188rem;
@@ -304,9 +271,6 @@
   letter-spacing: -0.18px;
   color: #888;
   text-transform: uppercase;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .bookform {
@@ -318,9 +282,6 @@
   color: #c4c4c4;
   font-size: 1rem;
   letter-spacing: -0.15px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
 }
 
 .bookform div {
@@ -372,11 +333,12 @@
 
   .bookslist .form-select,
   .bookslist .row {
-    margin: 0 3.09rem 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .book-row,
-  #section-divider {
+  .section-divider {
     min-width: 0;
   }
 
@@ -389,16 +351,18 @@
     height: auto;
   }
 
-  #section-divider {
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
     margin-left: 3.09rem;
     margin-right: 3.09rem;
   }
 
   .bookform,
-  #form-title {
+  .form-title {
     min-width: 0;
-    margin-left: 3.09rem;
-    margin-right: 3.09rem;
   }
 
   .bookform div {
@@ -439,7 +403,7 @@
 
   .percent,
   .completed {
-    margin-right: 2.5rem;
+    margin-right: 2.8rem;
   }
 }
 
@@ -449,18 +413,16 @@
     padding-right: 1rem;
   }
 
+  .header a {
+    margin: 0;
+  }
+
   h1 {
     margin-right: 1.4rem;
   }
 
-  #books {
+  .cms .books {
     margin-right: 0.5rem;
-  }
-
-  .bookslist .form-select,
-  .bookslist .row {
-    margin-right: 1rem;
-    margin-left: 1rem;
   }
 
   .progress-ui {
@@ -477,10 +439,21 @@
     flex-grow: 0;
   }
 
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
   .bookform,
-  #form-title {
+  .form-title {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+
+  .progress-icon {
+    padding-left: 0.6rem;
+  }
+
+  .progress-icon svg {
+    margin-bottom: 1rem;
   }
 
   .bookform div {
@@ -504,6 +477,10 @@
     font-size: 1.45rem;
     margin-top: 0.65rem;
     margin-right: 0.45rem;
+  }
+
+  .header a {
+    font-size: 1.45rem;
   }
 
   .header ul {

@@ -19,8 +19,6 @@ $pinkish-grey: #c4c4c4;
   height: 1rem;
   font: normal 0.813rem/1.9px 'Montserrat', sans-serif;
   color: $black-two;
-
-  @include font-props;
 }
 
 @mixin center {
@@ -32,10 +30,7 @@ $pinkish-grey: #c4c4c4;
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
-  letter-spacing: normal;
   color: #4386bf;
-
-  @include font-props;
 }
 
 @mixin action-button {

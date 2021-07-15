@@ -6,20 +6,16 @@
   .row {
     margin: 0 6.25rem 0;
   }
-
-  .form-select {
-    font-family: 'Montserrat', sans-serif;
-  }
 }
 
 .book-row {
-  display: flex;
   min-width: 75rem;
   min-height: 10.625rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   margin-bottom: 0.938rem;
   border-radius: 4px;
   background-color: #fff;
+  color: $black-two;
 
   @include divider;
 
@@ -32,9 +28,6 @@
   flex: 0 0 67.333%;
   display: flex;
   justify-content: space-between;
-  color: $black-two;
-
-  @include font-props;
 }
 
 .book-category {
@@ -44,7 +37,6 @@
   margin-bottom: 0;
   opacity: 0.5;
   font: bold 0.875rem 'Montserrat', sans-serif;
-  letter-spacing: normal;
 }
 
 .title {
@@ -61,24 +53,27 @@
   height: 1.188rem;
   margin-top: 0.25rem;
   margin-bottom: 0;
+}
 
+.author,
+.action,
+.action button {
   @include book-fonts;
 }
 
-.details {
-  ul {
-    @include center;
+.details ul,
+.progress-ui {
+  @include center;
+}
 
-    margin-top: 1.213rem;
-    margin-bottom: 0;
-  }
+.details ul {
+  margin-top: 1.213rem;
+  margin-bottom: 0;
 }
 
 .action {
   padding-right: 1.063rem;
   padding-left: 0.938rem;
-
-  @include book-fonts;
 
   &:first-child {
     padding-left: 0;
@@ -87,19 +82,11 @@
   button {
     border: 0;
     background-color: transparent;
-
-    @include book-fonts;
   }
 }
 
-.progress-ui {
-  @include center;
-
-  font-family: 'Montserrat', sans-serif;
-
-  p {
-    margin: 0;
-  }
+.progress-ui p {
+  margin: 0;
 }
 
 .progress-icon {
@@ -109,7 +96,6 @@
 
   svg {
     width: 4.25rem;
-    height: 4.25rem;
     color: $dodger-blue;
   }
 }
@@ -127,7 +113,6 @@
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
   font-size: 0.875rem;
-  letter-spacing: normal;
 }
 
 .divider {
@@ -140,10 +125,7 @@
 
 .book-chapter {
   flex: 0 0 32.667%;
-  color: $black-two;
   font: 300 0.813rem 'Roboto Slab', serif;
-
-  @include font-props;
 }
 
 .current-chapter {
@@ -172,7 +154,7 @@
   @include action-button;
 }
 
-#section-divider {
+.section-divider {
   min-width: 75rem;
   height: 0.125rem;
   margin: 2.5rem 6.25rem 0;

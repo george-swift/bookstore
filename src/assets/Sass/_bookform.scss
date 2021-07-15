@@ -1,9 +1,6 @@
-.wrap-form {
-  padding: 0 0 8rem;
-  font-family: 'Montserrat', sans-serif;
-}
+.wrap-form { padding: 0 0 8rem; }
 
-#form-title {
+.form-title {
   min-width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 6.25rem 1.188rem;
@@ -12,8 +9,6 @@
   letter-spacing: -0.18px;
   color: $warm-grey;
   text-transform: uppercase;
-
-  @include font-props;
 }
 
 .bookform {
@@ -25,8 +20,6 @@
   color: $pinkish-grey;
   font-size: 1rem;
   letter-spacing: -0.15px;
-
-  @include font-props;
 
   div {
     padding: 0;

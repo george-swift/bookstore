@@ -4,15 +4,14 @@
     padding-right: 3.09rem;
   }
 
-  .bookslist {
-    .form-select,
-    .row {
-      margin: 0 3.09rem 0;
-    }
+  .bookslist .form-select,
+  .bookslist .row {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .book-row,
-  #section-divider {
+  .section-divider {
     min-width: 0;
   }
 
@@ -25,17 +24,17 @@
     height: auto;
   }
 
-  #section-divider {
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
     margin-left: 3.09rem;
     margin-right: 3.09rem;
   }
 
   .bookform,
-  #form-title {
-    min-width: 0;
-    margin-left: 3.09rem;
-    margin-right: 3.09rem;
-  }
+  .form-title { min-width: 0; }
 
   .bookform {
     div {
@@ -76,7 +75,7 @@
 
   .percent,
   .completed {
-    margin-right: 2.5rem;
+    margin-right: 2.8rem;
   }
 }
 
@@ -84,22 +83,18 @@
   .header {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    a {
+      margin: 0;
+    }
   }
 
   h1 {
     margin-right: 1.4rem;
   }
 
-  #books {
+  .cms .books {
     margin-right: 0.5rem;
-  }
-
-  .bookslist {
-    .form-select,
-    .row {
-      margin-right: 1rem;
-      margin-left: 1rem;
-    }
   }
 
   .progress-ui {
@@ -116,10 +111,21 @@
     flex-grow: 0;
   }
 
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
   .bookform,
-  #form-title {
+  .form-title {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+
+  .progress-icon {
+    padding-left: 0.6rem;
+
+    svg {
+      margin-bottom: 1rem;
+    }
   }
 
   .bookform {
@@ -148,6 +154,10 @@
   }
 
   .header {
+    a {
+      font-size: 1.45rem;
+    }
+
     ul {
       justify-content: end;
     }
