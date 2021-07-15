@@ -20,7 +20,7 @@ export default function BooksList() {
             ?? (<div className="col-12"><p>No available books in this category</p></div>)
           }
       </div>
-      <hr id="section-divider" />
+      <hr className="section-divider" />
     </div>
   );
 }

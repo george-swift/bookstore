@@ -37,7 +37,7 @@ const BooksForm = ({ createBook }) => {
 
   return (
     <div className="container-fluid wrap-form">
-      <h3 id="form-title">Add new book</h3>
+      <h3 className="form-title">Add new book</h3>
       <form className="row bookform" onSubmit={handleSubmit}>
         <div className="col-lg-6">
           <input

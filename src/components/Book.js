@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { randomInt } from '../constants';
 
 const Book = ({ book, removeBook }) => (
-  <div className="col-12 book-row">
+  <div className="col-12 d-flex book-row">
     <div className="book-name">
       <div className="details">
         <p className="book-category">{book.category}</p>

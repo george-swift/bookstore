@@ -8,13 +8,13 @@ const Header = () => (
     <ul>
       <li>
         <div className="cms">
-          <span id="books" role="button">Books</span>
-          <span id="categories" role="button">Categories</span>
+          <span className="books" role="button">Books</span>
+          <span className="categories" role="button">Categories</span>
         </div>
       </li>
       <li>
-        <span id="user" role="button">
-          <IoIosPerson id="user-svg" />
+        <span className="user" role="button">
+          <IoIosPerson className="user-svg" />
         </span>
       </li>
     </ul>
