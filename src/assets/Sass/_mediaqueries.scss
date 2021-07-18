@@ -143,6 +143,11 @@
     width: 100%;
     margin: 0 0 0.8rem;
   }
+
+  .editor form {
+    max-width: none;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -183,6 +188,14 @@
   .book-chapter {
     display: block;
     padding-top: 0.8rem;
+  }
+
+  .editor {
+    margin-top: 0;
+
+    form {
+      width: 100%;
+    }
   }
 }
 

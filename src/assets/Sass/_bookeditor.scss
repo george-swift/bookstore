@@ -1,0 +1,31 @@
+.editor {
+  @include center;
+
+  justify-content: center;
+  margin-top: 2rem;
+
+  form {
+    max-width: 40rem;
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    margin-bottom: 0.75rem;
+  }
+
+  button[type=submit] {
+    border: none;
+    background-color: $azure;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+  }
+}
