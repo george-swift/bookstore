@@ -3,6 +3,7 @@ import {
   CREATE_BOOK_SUCCEEDED,
   EDIT_BOOK_SUCCEEDED,
   UPDATE_REQUESTED,
+  FETCH_BOOKS_STARTED,
 } from '../constants';
 
 export default function update(state = { pending: form, completed: false }, action) {
@@ -23,6 +24,12 @@ export default function update(state = { pending: form, completed: false }, acti
       return {
         pending: form,
         completed: true,
+      };
+
+    case FETCH_BOOKS_STARTED:
+      return {
+        pending: form,
+        completed: false,
       };
 
     default:
