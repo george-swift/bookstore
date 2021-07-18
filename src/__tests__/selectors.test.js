@@ -1,8 +1,13 @@
-import { removeBook, filterByCategory } from '../actions';
+import { filterByCategory } from '../actions';
 import books from '../reducers/books';
 import filter from '../reducers/filter';
-import { getBooks, getFilterCategory, booksByCategory } from '../selectors';
-import { uniqueID } from '../constants';
+import {
+  getBooks,
+  getFilterCategory,
+  booksByCategory,
+  getPendingUpdate,
+} from '../selectors';
+import { form, REMOVE_BOOK_SUCCEEDED, uniqueID } from '../constants';
 
 describe('Testing BookStore selectors', () => {
   const state = {
@@ -19,6 +24,9 @@ describe('Testing BookStore selectors', () => {
       },
     ],
     filter: 'All',
+    update: {
+      pending: form,
+    },
   };
 
   afterEach(() => booksByCategory.resetRecomputations());
@@ -29,6 +37,10 @@ describe('Testing BookStore selectors', () => {
 
   it('should retrieve category from the getFilterCategory selector', () => {
     expect(getFilterCategory(state)).toMatch('All');
+  });
+
+  it('should return params for books that require updating', () => {
+    expect(getPendingUpdate(state)).toStrictEqual(expect.objectContaining({ ...form }));
   });
 
   it('should return null if no books match a filter category', () => {
@@ -57,7 +69,11 @@ describe('Testing BookStore selectors', () => {
   });
 
   it('should recompute state if book state in store changes', () => {
-    const action = removeBook(state.books[1]);
+    const action = {
+      type: REMOVE_BOOK_SUCCEEDED,
+      payload: (state.books[1].id),
+    };
+
     const updatedBooks = books(state.books, action);
     const newState = { ...state, books: updatedBooks };
 
