@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { uniqueID, CATEGORIES } from '../constants';
-import { createBook } from '../actions';
+import { CATEGORIES } from '../constants';
+import { createBookRequested } from '../actions';
 
-const BooksForm = ({ createBook }) => {
+const BooksForm = ({ createBookRequested }) => {
   const [state, setState] = useState({
     title: '',
     category: '',
@@ -27,8 +27,7 @@ const BooksForm = ({ createBook }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (category === '') return;
-    createBook({
-      id: uniqueID(),
+    createBookRequested({
       title,
       category,
     });
@@ -76,7 +75,7 @@ const BooksForm = ({ createBook }) => {
 };
 
 BooksForm.propTypes = {
-  createBook: PropTypes.func.isRequired,
+  createBookRequested: PropTypes.func.isRequired,
 };
 
-export default connect(null, { createBook })(BooksForm);
+export default connect(null, { createBookRequested })(BooksForm);
