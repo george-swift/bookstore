@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { CATEGORIES } from '../constants';
 
 export default function CategoryFilter({ filterCategory }) {
-  const categories = [...['All'], ...CATEGORIES];
+  const categories = ['All', ...CATEGORIES];
 
   const handleFilterChange = (e) => {
     const { value } = e.target;
