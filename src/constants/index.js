@@ -1,50 +1,36 @@
-export const uniqueID = () => Math.floor(Math.random() * (16 ** 4));
+export const FETCH_BOOKS_STARTED = 'FETCH_BOOKS_STARTED';
+export const FETCH_BOOKS_SUCCEEDED = 'FETCH_BOOKS_SUCCEEDED';
+export const FETCH_BOOKS_FAILED = 'FETCH_BOOKS_FAILED';
+
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+
+export const CREATE_BOOK_REQUESTED = 'CREATE_BOOK_REQUESTED';
+export const CREATE_BOOK_SUCCEEDED = 'CREATE_BOOK_SUCCEEDED';
+export const CREATE_BOOK_FAILED = 'CREATE_BOOK_FAILED';
+
+export const EDIT_BOOK_REQUESTED = 'EDIT_REQUESTED';
+export const EDIT_BOOK_SUCCEEDED = 'EDIT_BOOK_SUCCEEDED';
+export const EDIT_BOOK_FAILED = 'EDIT_BOOK_FAILED';
+
+export const REMOVE_BOOK_REQUESTED = 'REMOVE_BOOK_REQUESTED';
+export const REMOVE_BOOK_SUCCEEDED = 'REMOVE_BOOK_SUCCEEDED';
+export const REMOVE_BOOK_FAILED = 'REMOVE_BOOK_FAILED';
+
+export const UPDATE_REQUESTED = 'UPDATE_REQUESTED';
 
 export const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-export const books = [
-  {
-    id: uniqueID(),
-    title: 'The Martian',
-    category: 'Sci-Fi',
-    author: 'Andy Weir',
-  },
-  {
-    id: uniqueID(),
-    title: 'Hands-on Machine Learning',
-    category: 'Learning',
-    author: 'Aurelien Geron',
-  },
-  {
-    id: uniqueID(),
-    title: "Alice's Adventures in Wonderland",
-    category: 'Kids',
-    author: 'Lewis Caroll',
-  },
-  {
-    id: uniqueID(),
-    title: 'The Woman in Black',
-    category: 'Horror',
-    author: 'Susan Hill',
-  },
-  {
-    id: uniqueID(),
-    title: 'Black and British: A Forgotten History',
-    category: 'History',
-    author: 'David Olusoga',
-  },
-  {
-    id: uniqueID(),
-    title: 'Steve Jobs',
-    category: 'Biography',
-    author: 'Walter Isaacson',
-  },
-  {
-    id: uniqueID(),
-    title: 'The Hunger Games',
-    category: 'Action',
-    author: 'Suzanne Collins',
-  },
-];
+export const UI = { isLoading: false, error: null };
+
+export const uniqueID = () => Math.floor(Math.random() * (16 ** 4));
 
 export const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+export const form = {
+  id: '',
+  title: '',
+  category: '',
+  author: '',
+  chapter: '',
+  percentage: '',
+};

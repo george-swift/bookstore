@@ -1,40 +1,63 @@
-import { createBook, removeBook, filterByCategory } from '../actions';
+import {
+  uniqueID,
+  FETCH_BOOKS_STARTED, CHANGE_FILTER,
+  CREATE_BOOK_REQUESTED, UPDATE_REQUESTED,
+  EDIT_BOOK_REQUESTED, REMOVE_BOOK_REQUESTED,
+} from '../constants';
 
-import { uniqueID } from '../constants';
+import {
+  filterByCategory, fetchBooksStarted,
+  createBookRequested, updateRequested,
+  editBookRequested, removeBookRequested,
+} from '../actions';
 
-describe('Testing action creators', () => {
+describe('Testing synchronous action creators', () => {
   const book = {
     id: uniqueID(),
     title: 'Test book',
     category: 'Learning',
   };
 
-  test('Should create book on submit', () => {
-    const expectedAction = {
-      type: 'CREATE_BOOK',
-      payload: book,
-    };
-
-    expect(createBook(book)).toEqual(expectedAction);
-  });
-
-  test('Should remove book on submit', () => {
-    const expectedAction = {
-      type: 'REMOVE_BOOK',
-      payload: {
-        bookId: book.id,
-      },
-    };
-
-    expect(removeBook(book)).toEqual(expectedAction);
+  test('Should create the fetch books action', () => {
+    expect(fetchBooksStarted()).toStrictEqual(expect.objectContaining({
+      type: FETCH_BOOKS_STARTED,
+    }));
   });
 
   test('Should provide a filter category', () => {
-    const expectedAction = {
-      type: 'CHANGE_FILTER',
+    expect(filterByCategory('Sci-Fi')).toStrictEqual(expect.objectContaining({
+      type: CHANGE_FILTER,
       payload: 'Sci-Fi',
-    };
+    }));
+  });
 
-    expect(filterByCategory('Sci-Fi')).toEqual(expectedAction);
+  test('Should create an update requested action', () => {
+    expect(updateRequested(book)).toStrictEqual(expect.objectContaining({
+      type: UPDATE_REQUESTED,
+      payload: book,
+    }));
+  });
+
+  test('Should start a create book requested action', () => {
+    expect(createBookRequested(book)).toStrictEqual(expect.objectContaining({
+      type: CREATE_BOOK_REQUESTED,
+      payload: book,
+    }));
+  });
+
+  test('Should start an edit book requested action', () => {
+    expect(editBookRequested(book)).toStrictEqual(expect.objectContaining({
+      type: EDIT_BOOK_REQUESTED,
+      payload: book,
+    }));
+  });
+
+  test('Should provide a remove book requested action', () => {
+    expect(removeBookRequested(book)).toStrictEqual(expect.objectContaining({
+      type: REMOVE_BOOK_REQUESTED,
+      payload: {
+        bookId: book.id,
+      },
+    }));
   });
 });

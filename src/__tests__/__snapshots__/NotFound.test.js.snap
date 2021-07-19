@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing NotFound component should render correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="text-center"
+  >
+    <h3>
+      Page not Found!
+    </h3>
+    <p>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+         Back to Homepage
+      </a>
+    </p>
+  </div>
+</div>
+`;

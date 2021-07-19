@@ -1,3 +1,13 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1.5s linear infinite;
+}
+
 .bookslist {
   background-color: #f8f9fa;
   margin-top: 2.313rem;
@@ -48,17 +58,18 @@
   letter-spacing: -0.2px;
 }
 
+.author,
+.action,
+.action button {
+  @include book-fonts;
+}
+
 .author {
   min-width: 6.688rem;
   height: 1.188rem;
   margin-top: 0.25rem;
   margin-bottom: 0;
-}
-
-.author,
-.action,
-.action button {
-  @include book-fonts;
+  font-weight: 600;
 }
 
 .details ul,
@@ -82,6 +93,10 @@
   button {
     border: 0;
     background-color: transparent;
+  }
+
+  a {
+    color: #4386bf;
   }
 }
 

@@ -12,3 +12,19 @@ export const booksByCategory = createSelector(
     return filteredByCategory.length > 0 ? filteredByCategory : null;
   },
 );
+
+export const getPendingUpdate = (state) => {
+  const {
+    id, title, category, author, chapter, percentage,
+  } = state.update.pending;
+  return {
+    id,
+    title,
+    category,
+    author,
+    chapter,
+    percentage,
+  };
+};
+
+export const updateCompleted = (state) => state.update.completed;

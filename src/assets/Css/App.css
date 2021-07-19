@@ -16,6 +16,14 @@
   padding: 0;
 }
 
+.app a {
+  text-decoration: none;
+}
+
+.app .alert {
+  border-radius: 0;
+}
+
 .container-fluid {
   padding-right: 0;
   padding-left: 0;
@@ -40,7 +48,6 @@
   margin: 0.375rem 2.938rem 0.125rem 0;
   color: #0290ff;
   font: bold 1.875rem "Montserrat", sans-serif;
-  text-decoration: none;
 }
 
 .header ul {
@@ -82,6 +89,48 @@
 
 .user-svg {
   color: #0290ff;
+}
+
+.editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.editor form {
+  max-width: 40rem;
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.editor label {
+  margin-bottom: 0.75rem;
+}
+
+.editor button[type=submit] {
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.editor button[type=submit]:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1.5s linear infinite;
 }
 
 .bookslist {
@@ -133,13 +182,6 @@
   letter-spacing: -0.2px;
 }
 
-.author {
-  min-width: 6.688rem;
-  height: 1.188rem;
-  margin-top: 0.25rem;
-  margin-bottom: 0;
-}
-
 .author,
 .action,
 .action button {
@@ -147,6 +189,14 @@
   font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
+}
+
+.author {
+  min-width: 6.688rem;
+  height: 1.188rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
 .details ul,
@@ -172,6 +222,10 @@
 .action button {
   border: 0;
   background-color: transparent;
+}
+
+.action a {
+  color: #4386bf;
 }
 
 .progress-ui p {
@@ -469,6 +523,11 @@
     width: 100%;
     margin: 0 0 0.8rem;
   }
+
+  .editor form {
+    max-width: none;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -507,6 +566,14 @@
   .book-chapter {
     display: block;
     padding-top: 0.8rem;
+  }
+
+  .editor {
+    margin-top: 0;
+  }
+
+  .editor form {
+    width: 100%;
   }
 }
 

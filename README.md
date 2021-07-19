@@ -1,22 +1,28 @@
 # Bookstore App
-![](./src/assets/bookstore.png)
+![](./src/assets/home.png)
 ## Live Link
 [Visit the Bookstore](https://redux-app-bookstore.herokuapp.com/)
 ## Objectives
 - Using Redux in a React application
 - Structuring a Redux store
 - Using React Redux Hooks
+- Interacting with an API Backend
+- Managing async workflows with Redux Sagas
 - Calculating derived data with Redux Selectors
 - Unit testing a React and Redux application
 - Functional Programming
 - Meeting model client requirements
 
 ## Features
-Bookstore CMS is a book management app that implements a model design spec. Each book has a title and belongs to some category. Currently, users can add a book to the store by filling in the title and selecting a category in the form. To delete a book from _Bookstore CMS_ simply click on `Remove`. Above the books, the category filter displays books for a given category. By default, it shows `All`. Support to add comments, reading progress and editing to each book will be available in subsequent implementations. This app is hosted on Heroku.
+Bookstore CMS is a book management app that implements a model design spec. Each book has a title and belongs to some category. Users can add a book to the store by filling in the title and selecting a category in the form. To delete a book from _Bookstore CMS_ simply click on `Remove`. Above the books, the category filter displays books for a given category and by default is `All`. Toggling the dropdown filters book by selected category. To add author and reading progress to a book in the list, click on `Edit` or `Update Progress`. Adding comments, managing categories and user authentication will be available in subsequent implementations. This app is hosted on Heroku.
 
 _Selecting a category to filter books in the store._
 
 ![](./src/assets/mobile.png)
+
+_Editing a book in the store_
+
+![](./src/assets/editing.png)
 
 ## Prerequisites
 - Internet Connection
@@ -28,7 +34,9 @@ _Selecting a category to filter books in the store._
 - Node.js
 - React-Create-App
 - React
+- React Router v6
 - Redux
+- Redux Saga
 - Javascript ES6+
 - npm packages
 - Bootstrap 5
