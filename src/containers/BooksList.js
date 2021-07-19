@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import { removeBookRequested, filterByCategory, updateRequested } from '../actions';

@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Book Component should render correctly 1`] = `
+<div
+  className="col-12 d-flex book-row"
+>
+  <div
+    className="book-name"
+  >
+    <div
+      className="details"
+    >
+      <p
+        className="book-category"
+      >
+        Learning
+      </p>
+      <p
+        className="title"
+      >
+        Test Book
+      </p>
+      <span
+        className="d-block author"
+      >
+        Click Edit to add author
+      </span>
+      <ul>
+        <li
+          className="action border-end"
+        >
+          <span
+            className="comments"
+            role="button"
+          >
+            Comments
+          </span>
+        </li>
+        <li
+          className="action border-end"
+        >
+          <button
+            className="remove"
+            onClick={[Function]}
+            title="Click to remove book from store"
+            type="button"
+          >
+            Remove
+          </button>
+        </li>
+        <li
+          className="action"
+        >
+          <a
+            className="edit"
+            href="/edit"
+            onClick={[Function]}
+          >
+            Edit
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="progress-ui"
+    >
+      <span
+        className="progress-icon"
+      >
+        <svg
+          className="CircularProgressbar "
+          data-test-id="CircularProgressbar"
+          style={Object {}}
+          viewBox="0 0 100 100"
+        >
+          <path
+            className="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+            fillOpacity={0}
+            strokeWidth={8}
+            style={
+              Object {
+                "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+                "strokeDashoffset": "0px",
+              }
+            }
+          />
+          <path
+            className="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+            fillOpacity={0}
+            strokeWidth={8}
+            style={
+              Object {
+                "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+                "strokeDashoffset": "289.02652413026095px",
+              }
+            }
+          />
+        </svg>
+      </span>
+      <p>
+        <span
+          className="percent"
+        >
+          0%
+        </span>
+        <br />
+        <span
+          className="completed"
+        >
+          Completed
+        </span>
+      </p>
+    </div>
+  </div>
+  <span
+    className="divider"
+  />
+  <div
+    className="book-chapter"
+  >
+    <p
+      className="current-chapter"
+    >
+      Current Chapter
+    </p>
+    <p
+      className="current-lesson"
+    >
+      Chapter 0
+    </p>
+    <a
+      className="btn btn-sm update-progress"
+      href="/edit"
+      onClick={[Function]}
+    >
+      Update Progress
+    </a>
+  </div>
+</div>
+`;
