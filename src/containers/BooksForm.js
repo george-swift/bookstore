@@ -79,3 +79,4 @@ BooksForm.propTypes = {
 };
 
 export default connect(null, { createBookRequested })(BooksForm);
+export { BooksForm as UnconnectedBooksForm };

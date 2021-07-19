@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the BooksForm component should render correctly when passed props 1`] = `
+<div
+  className="container-fluid wrap-form"
+>
+  <h3
+    className="form-title"
+  >
+    Add new book
+  </h3>
+  <form
+    className="row bookform"
+    onSubmit={[Function]}
+  >
+    <div
+      className="col-lg-6"
+    >
+      <input
+        className="custom-width form-control"
+        minLength="5"
+        name="title"
+        onChange={[Function]}
+        placeholder="Book title"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="col-lg-4 category-input"
+    >
+      <select
+        className="form-select"
+        name="category"
+        onChange={[Function]}
+        required={true}
+        value=""
+      >
+        <option>
+          Category
+        </option>
+        <option
+          value="Action"
+        >
+          Action
+        </option>
+        <option
+          value="Biography"
+        >
+          Biography
+        </option>
+        <option
+          value="History"
+        >
+          History
+        </option>
+        <option
+          value="Horror"
+        >
+          Horror
+        </option>
+        <option
+          value="Kids"
+        >
+          Kids
+        </option>
+        <option
+          value="Learning"
+        >
+          Learning
+        </option>
+        <option
+          value="Sci-Fi"
+        >
+          Sci-Fi
+        </option>
+      </select>
+    </div>
+    <div
+      className="col-lg-2 submit-form"
+    >
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        ADD BOOK
+      </button>
+    </div>
+  </form>
+</div>
+`;
