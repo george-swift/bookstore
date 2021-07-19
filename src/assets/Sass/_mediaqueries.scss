@@ -1,0 +1,206 @@
+@media screen and (max-width: 1200px) {
+  .header {
+    padding-left: 3.09rem;
+    padding-right: 3.09rem;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .book-row,
+  .section-divider {
+    min-width: 0;
+  }
+
+  .book-row {
+    padding: 2rem 2rem 0.875rem 0.8rem;
+  }
+
+  .book-row,
+  .title {
+    height: auto;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
+    margin-left: 3.09rem;
+    margin-right: 3.09rem;
+  }
+
+  .bookform,
+  .form-title { min-width: 0; }
+
+  .bookform {
+    div {
+      padding: 0;
+
+      &:first-child {
+        width: 48%;
+        margin: 0 2% 1.5rem 0;
+      }
+    }
+  }
+
+  .category-input {
+    width: 48%;
+    margin: 0 0 1.5rem 2%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .book-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .divider {
+    transform: rotate(90deg);
+    margin: -1rem 0 -2rem 2rem;
+  }
+
+  .book-chapter {
+    @include center;
+
+    * {
+      flex-grow: 1;
+      height: auto;
+    }
+  }
+
+  .percent,
+  .completed {
+    margin-right: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    a {
+      margin: 0;
+    }
+  }
+
+  h1 {
+    margin-right: 1.4rem;
+  }
+
+  .cms .books {
+    margin-right: 0.5rem;
+  }
+
+  .progress-ui {
+    display: block;
+  }
+
+  .current-chapter,
+  .current-lesson,
+  .update-progress {
+    margin-right: auto;
+  }
+
+  .update-progress {
+    flex-grow: 0;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .progress-icon {
+    padding-left: 0.6rem;
+
+    svg {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .bookform {
+    div {
+      padding: 0;
+
+      &:first-child {
+        width: 100%;
+        margin: 0 0 0.8rem;
+      }
+    }
+  }
+
+  .category-input {
+    width: 100%;
+    margin: 0 0 0.8rem;
+  }
+
+  .editor form {
+    max-width: none;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    min-width: 0;
+    font-size: 1.45rem;
+    margin-top: 0.65rem;
+    margin-right: 0.45rem;
+  }
+
+  .header {
+    a {
+      font-size: 1.45rem;
+    }
+
+    ul {
+      justify-content: end;
+    }
+
+    li {
+      flex-grow: 1;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .cms {
+    text-align: end;
+  }
+
+  .percent,
+  .completed {
+    margin-right: 0;
+  }
+
+  .book-chapter {
+    display: block;
+    padding-top: 0.8rem;
+  }
+
+  .editor {
+    margin-top: 0;
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .progress-ui {
+    display: none;
+  }
+}

@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap");
+
+.app {
+  background-color: #fafafa;
+  min-height: 100vh;
+  letter-spacing: normal;
+  font-family: "Montserrat", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.app ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app a {
+  text-decoration: none;
+}
+
+.app .alert {
+  border-radius: 0;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.header,
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+}
+
+.header a {
+  min-width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  color: #0290ff;
+  font: bold 1.875rem "Montserrat", sans-serif;
+}
+
+.header ul {
+  flex-grow: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.header li:last-child {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.cms .books {
+  width: 3.688rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+}
+
+.cms .categories {
+  width: 6.563rem;
+  margin: 1.125rem 0 0.688rem 0;
+  opacity: 0.5;
+}
+
+.cms .books,
+.cms .categories {
+  height: 1rem;
+  font: normal 0.813rem/1.9px "Montserrat", sans-serif;
+  color: #121212;
+}
+
+.user {
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.user-svg {
+  color: #0290ff;
+}
+
+.editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.editor form {
+  max-width: 40rem;
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.editor label {
+  margin-bottom: 0.75rem;
+}
+
+.editor button[type=submit] {
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.editor button[type=submit]:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1.5s linear infinite;
+}
+
+.bookslist {
+  background-color: #f8f9fa;
+  margin-top: 2.313rem;
+}
+
+.bookslist .form-select,
+.bookslist .row {
+  margin: 0 6.25rem 0;
+}
+
+.book-row {
+  min-width: 75rem;
+  min-height: 10.625rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  margin-bottom: 0.938rem;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #121212;
+  border: 1px solid #e8e8e8;
+}
+
+.book-row:last-child {
+  margin-bottom: 0;
+}
+
+.book-name {
+  flex: 0 0 67.333%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin-right: 2.438rem;
+  margin-bottom: 0;
+  opacity: 0.5;
+  font: bold 0.875rem "Montserrat", sans-serif;
+}
+
+.title {
+  min-width: 12.313rem;
+  min-height: 1.813rem;
+  margin-top: 0.188rem;
+  margin-bottom: 0;
+  font: bold 1.375rem "Roboto Slab", serif;
+  letter-spacing: -0.2px;
+}
+
+.author,
+.action,
+.action button {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.author {
+  min-width: 6.688rem;
+  height: 1.188rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.details ul,
+.progress-ui {
+  display: flex;
+  align-items: center;
+}
+
+.details ul {
+  margin-top: 1.213rem;
+  margin-bottom: 0;
+}
+
+.action {
+  padding-right: 1.063rem;
+  padding-left: 0.938rem;
+}
+
+.action:first-child {
+  padding-left: 0;
+}
+
+.action button {
+  border: 0;
+  background-color: transparent;
+}
+
+.action a {
+  color: #4386bf;
+}
+
+.progress-ui p {
+  margin: 0;
+}
+
+.progress-icon {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.progress-icon svg {
+  width: 4.25rem;
+  color: #379cf6;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 1.125rem 3.688rem 0 0;
+  border: 1px solid #e8e8e8;
+}
+
+.book-chapter {
+  flex: 0 0 32.667%;
+  font: 300 0.813rem "Roboto Slab", serif;
+}
+
+.current-chapter {
+  min-width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 0;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.current-lesson {
+  min-width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 0;
+  font: 300 1rem "Roboto Slab", serif;
+  letter-spacing: -0.4px;
+}
+
+.update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.update-progress:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.section-divider {
+  min-width: 75rem;
+  height: 0.125rem;
+  margin: 2.5rem 6.25rem 0;
+  border: 1px solid #e8e8e8;
+}
+
+.wrap-form {
+  padding: 0 0 8rem;
+}
+
+.form-title {
+  min-width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 6.25rem 1.188rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.bookform {
+  min-width: 75rem;
+  height: 2.813rem;
+  padding: 0;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+  color: #c4c4c4;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+}
+
+.bookform div {
+  padding: 0;
+}
+
+.bookform div:first-child {
+  margin-right: 2.125rem;
+}
+
+.bookform input,
+.bookform select,
+.bookform button {
+  height: 100%;
+}
+
+.category-input {
+  width: 17.813rem;
+  margin-right: 2.125rem;
+}
+
+.submit-form {
+  flex-grow: 1;
+  min-width: 11.5rem;
+  margin-right: 0;
+}
+
+.submit-form button {
+  width: 100%;
+  font: bold 0.813rem "Roboto Slab", serif;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-form button:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding-left: 3.09rem;
+    padding-right: 3.09rem;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .book-row,
+  .section-divider {
+    min-width: 0;
+  }
+
+  .book-row {
+    padding: 2rem 2rem 0.875rem 0.8rem;
+  }
+
+  .book-row,
+  .title {
+    height: auto;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
+    margin-left: 3.09rem;
+    margin-right: 3.09rem;
+  }
+
+  .bookform,
+  .form-title {
+    min-width: 0;
+  }
+
+  .bookform div {
+    padding: 0;
+  }
+
+  .bookform div:first-child {
+    width: 48%;
+    margin: 0 2% 1.5rem 0;
+  }
+
+  .category-input {
+    width: 48%;
+    margin: 0 0 1.5rem 2%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .book-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .divider {
+    transform: rotate(90deg);
+    margin: -1rem 0 -2rem 2rem;
+  }
+
+  .book-chapter {
+    display: flex;
+    align-items: center;
+  }
+
+  .book-chapter * {
+    flex-grow: 1;
+    height: auto;
+  }
+
+  .percent,
+  .completed {
+    margin-right: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header a {
+    margin: 0;
+  }
+
+  h1 {
+    margin-right: 1.4rem;
+  }
+
+  .cms .books {
+    margin-right: 0.5rem;
+  }
+
+  .progress-ui {
+    display: block;
+  }
+
+  .current-chapter,
+  .current-lesson,
+  .update-progress {
+    margin-right: auto;
+  }
+
+  .update-progress {
+    flex-grow: 0;
+  }
+
+  .bookslist .form-select,
+  .bookslist .row,
+  .section-divider,
+  .bookform,
+  .form-title {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .progress-icon {
+    padding-left: 0.6rem;
+  }
+
+  .progress-icon svg {
+    margin-bottom: 1rem;
+  }
+
+  .bookform div {
+    padding: 0;
+  }
+
+  .bookform div:first-child {
+    width: 100%;
+    margin: 0 0 0.8rem;
+  }
+
+  .category-input {
+    width: 100%;
+    margin: 0 0 0.8rem;
+  }
+
+  .editor form {
+    max-width: none;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    min-width: 0;
+    font-size: 1.45rem;
+    margin-top: 0.65rem;
+    margin-right: 0.45rem;
+  }
+
+  .header a {
+    font-size: 1.45rem;
+  }
+
+  .header ul {
+    justify-content: end;
+  }
+
+  .header li {
+    flex-grow: 1;
+  }
+
+  .header li:last-child {
+    display: none;
+  }
+
+  .cms {
+    text-align: end;
+  }
+
+  .percent,
+  .completed {
+    margin-right: 0;
+  }
+
+  .book-chapter {
+    display: block;
+    padding-top: 0.8rem;
+  }
+
+  .editor {
+    margin-top: 0;
+  }
+
+  .editor form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .progress-ui {
+    display: none;
+  }
+}
