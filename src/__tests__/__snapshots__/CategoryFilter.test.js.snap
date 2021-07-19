@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the category Filter component should render correctly 1`] = `
+<select
+  className="form-select my-3 w-auto"
+  onChange={[Function]}
+>
+  <option
+    value="All"
+  >
+    All
+  </option>
+  <option
+    value="Action"
+  >
+    Action
+  </option>
+  <option
+    value="Biography"
+  >
+    Biography
+  </option>
+  <option
+    value="History"
+  >
+    History
+  </option>
+  <option
+    value="Horror"
+  >
+    Horror
+  </option>
+  <option
+    value="Kids"
+  >
+    Kids
+  </option>
+  <option
+    value="Learning"
+  >
+    Learning
+  </option>
+  <option
+    value="Sci-Fi"
+  >
+    Sci-Fi
+  </option>
+</select>
+`;
