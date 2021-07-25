@@ -48,7 +48,7 @@ _Editing a book in the store_
 - To get started with the app, clone this project by running `git clone https://github.com/george-swift/bookstore.git`
 - `cd` into the directory and run `npm install` to install the needed packages and dependencies
 - Run `npm start` to fire up a local server with live reloading.
-- If not already redirected, visit `http://localhost:3000/` in your browser to use the calculator.
+- If not already redirected, visit `http://localhost:3000/` in your browser to use the bookstore.
 - To terminate the server, enter `Ctrl + C` in your terminal
 
 ## Testing
